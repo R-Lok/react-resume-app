@@ -1,7 +1,7 @@
 
 
 function Header() {
-    return <div>Hello World</div>
+    return <div className='header'>Resume Creation Application</div>
 }
 
 export default Header
