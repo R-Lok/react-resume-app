@@ -1,12 +1,11 @@
-export default function EditorExperienceList({ experiences, removeElement}) {
+import EditorExperienceItem from "./EditorExperienceItem"
+
+export default function EditorExperienceList({ experiences, removeElement, editElement}) {
 
     return (
         <div>
             {experiences.map((element, index) => (
-                <div key={element.name}>
-                    <span>{element.name}</span>
-                    <button onClick={() => {removeElement(index)}}> Delete </button>
-                </div>
+                <EditorExperienceItem key={element.id} experience={element} index={index} removeElement={removeElement} editElement={editElement}></EditorExperienceItem>
             ))}
         </div>
     )

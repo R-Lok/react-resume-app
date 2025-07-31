@@ -1,4 +1,4 @@
-export default function NamedInput( {id, fieldName, currentValue, setter, inputType} ) {
+export default function NamedInput({ id, fieldName, currentValue, setter, inputType }) {
 
     const labelStyle = {
         'display': 'block'
@@ -8,12 +8,20 @@ export default function NamedInput( {id, fieldName, currentValue, setter, inputT
     return (
         <div>
             <label htmlFor={id} style={labelStyle}>{fieldName}</label>
-            <input 
-            id={id} 
-            type={inputType} 
-            value={currentValue} 
-            onChange={e => setter(e.target.value)}
-            />
+            {
+                inputType === 'textarea' ? 
+                    (<textarea id={id} value={currentValue} onChange={e => setter(e.target.value)}>
+
+                    </textarea>)
+                :
+                    (<input
+                        id={id}
+                        type={inputType}
+                        value={currentValue}
+                        onChange={e => setter(e.target.value)}
+                    />)
+            }
+
         </div>
     )
 }

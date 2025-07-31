@@ -4,7 +4,6 @@ export function BasicInfoDisplay( {personalDetails} ) {
         display: 'block'
     }
 
-
     return (
         <div>
         {Object.entries(personalDetails).map(([key, val]) => (

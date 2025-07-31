@@ -12,11 +12,12 @@ function App() {
 
   const [educationDetails, setEducationDetails] = useState([
     {
+      id: crypto.randomUUID(),
       name: 'Masters Degree in Code',
       location: 'University of Bla',
-      startDate: 'Nov 2023',
-      endDate: 'Dec 2025',
-      bullets: [["Graduated with 95% GPA", "President of the Student Union"]]
+      startDate: '2018-01-01',
+      endDate: '2023-12-01',
+      description: '- Led the student union\n - Completed with 99% GPA'
     }
   ]) //mock for now, set to Empty when completed
 
