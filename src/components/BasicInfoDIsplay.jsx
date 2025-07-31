@@ -6,17 +6,11 @@ export function BasicInfoDisplay( {personalDetails} ) {
 
     return (
         <div>
-        {Object.entries(personalDetails).map(([key, val]) => (
-            <div key={key} style={style}>
-                <h4>
-                    {key.toUpperCase()}
-                </h4>
-                <div>
-                    {val}
-                </div>
+            <h1>{personalDetails.name}</h1>
+            <div className='flex justify-evenly'>
+                <span>{personalDetails.email}</span>
+                <span>{personalDetails.phone}</span>
             </div>
-        ))}
-        
         </div>
     )
 

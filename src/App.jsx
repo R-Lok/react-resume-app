@@ -6,9 +6,9 @@ import { ResumeDisplay } from './components/ResumeDisplay'
 
 function App() {
   const [personalDetails, setPersonalDetails] = useState({
-    'name': '',
-    'email': '',
-    'phone': ''
+    'name': 'John Doe',
+    'email': 'JDoe@xyz.com',
+    'phone': '778-11112222'
   })
 
   const [educationDetails, setEducationDetails] = useState([
