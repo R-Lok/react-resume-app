@@ -1,32 +1,32 @@
 import EditorExperienceList from "./EditorExperienceList"
+import { Experience } from "../models/experience"
 
-export default function EducationDetailsEditor( {educationDetails, setEducationDetails} ) {
+export default function EducationDetailsEditor({ educationDetails, setEducationDetails }) {
 
     const deleteEducationElement = (indexToRemove) => {
         setEducationDetails(prev => {
-            return prev.filter((_, index) => index !==  indexToRemove)
+            return prev.filter((_, index) => index !== indexToRemove)
         })
-    } 
+    }
 
     const editEducationElement = (indexToEdit, newElement) => {
         setEducationDetails(prev => {
-            return prev.map( (element, index) => {
+            return prev.map((element, index) => {
                 return index === indexToEdit ? newElement : element
             })
         })
     }
-    
+
     const addEducationElement = () => {
         setEducationDetails(prev => {
-            return [...prev, 
-                {
-                    id: crypto.randomUUID(),
-                    name: "New School",
-                    location: "",
-                    startDate: "",
-                    endDate: "",
-                    description: ''
-                }
+            return [...prev,
+            new Experience(
+                'New School',
+                '',
+                '',
+                '',
+                ''
+            )
             ]
         })
     }
