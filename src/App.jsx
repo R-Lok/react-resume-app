@@ -8,6 +8,10 @@ function App() {
     'phoneNum': ''
   })
 
+  const [educationDetails, setEducationDetails] = useState([])
+
+  const [workDetails, setWorkDetails] = useState([])
+
   return (
     <div className='container'>
     </div>
