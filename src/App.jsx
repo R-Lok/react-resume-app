@@ -38,7 +38,7 @@ function App() {
   }
 
   return (
-    <div className='container flex gap-24 w-screen h-screen'>
+    <div className='grid grid-cols-[1fr_2fr] w-screen h-screen'>
       <EditBar stateManager={stateManager}></EditBar>
       <ResumeDisplay personalDetails={personalDetails} educationDetails={educationDetails} workDetails={workDetails}></ResumeDisplay>
     </div>

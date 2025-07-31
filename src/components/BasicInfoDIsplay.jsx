@@ -1,9 +1,5 @@
 export default function BasicInfoDisplay( {personalDetails} ) {
 
-    const style = {
-        display: 'block'
-    }
-
     return (
         <div>
             <h1>{personalDetails.name}</h1>
