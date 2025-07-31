@@ -7,8 +7,8 @@ export default function EditorExperienceItem({ experience, index, removeElement,
 
     return (
         <div>
-            <button onClick={() => {setShowDetails(!isShowDetails)}}>{experience.name}</button>
-            <button onClick={() => { removeElement(index) }}> ❌ </button>
+            <button onClick={() => {setShowDetails(!isShowDetails)}}>{experience.name + (isShowDetails ? " ▲" : " ▼")} </button>
+            <button style={{background: 'none'}}onClick={() => { removeElement(index) }}> ❌ </button>
 
             {isShowDetails ? <EditorExperienceForm experience={experience} index={index} editElement={editElement}></EditorExperienceForm>: null}
         </div>
