@@ -15,11 +15,26 @@ export default function EducationDetailsEditor( {educationDetails, setEducationD
             })
         })
     }
-
+    
+    const addEducationElement = () => {
+        setEducationDetails(prev => {
+            return [...prev, 
+                {
+                    id: crypto.randomUUID(),
+                    name: "New School",
+                    location: "",
+                    startDate: "",
+                    endDate: "",
+                    description: ''
+                }
+            ]
+        })
+    }
     return (
-        <div>
+        <div className='flex flex-col gap-4'>
             <h1>Education</h1>
             <EditorExperienceList experiences={educationDetails} removeElement={deleteEducationElement} editElement={editEducationElement}></EditorExperienceList>
+            <button onClick={addEducationElement}>Add Education</button>
         </div>
     )
 }

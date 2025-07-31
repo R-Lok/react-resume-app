@@ -1,9 +1,9 @@
 import {useState} from 'react'
 import EditorEducationForm from './EditorEducationForm'
 
-export default function EditorExperienceItem({ experience, index, removeElement, editElement }) {
+export default function EditorExperienceItem({ experience, index, removeElement, editElement, isShown }) {
 
-    const [isShowDetails, setShowDetails] = useState(false)
+    const [isShowDetails, setShowDetails] = useState(isShown)
 
     return (
         <div>

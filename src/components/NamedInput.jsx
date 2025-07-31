@@ -2,12 +2,12 @@ export default function NamedInput({ id, fieldName, currentValue, setter, inputT
 
     const labelStyle = {
         'display': 'block',
-        'font-weight': 'bold'
+        'fontWeight': 'bold'
     }
 
     const inputBorder = {
         'border': '1px solid white',
-        'border-radius': '10px',
+        'borderRadius': '10px',
         'padding': '5px' 
     }
     
