@@ -1,4 +1,4 @@
-export function BasicInfoDisplay( {personalDetails} ) {
+export default function BasicInfoDisplay( {personalDetails} ) {
 
     const style = {
         display: 'block'

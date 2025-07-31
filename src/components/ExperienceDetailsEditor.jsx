@@ -25,7 +25,8 @@ export default function ExperienceDetailsEditor({ experienceTypeName, experience
                 '',
                 '',
                 '',
-                ''
+                '',
+                experienceTypeName
             )
             ]
         })

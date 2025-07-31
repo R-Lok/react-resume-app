@@ -28,14 +28,14 @@ export default function EditorExperienceForm({ experience, index, editElement })
         <div>
             <NamedInput
                 id={experience.id}
-                fieldName={experience.type === 'education' ? "Program" : "Job Title"}
+                fieldName={experience.type.toLowerCase() === 'education' ? "Program" : "Job Title"}
                 currentValue={experience.name}
                 inputType='text'
                 setter={setTitle}>
             </NamedInput>
             <NamedInput
                 id={experience.id}
-                fieldName={experience.type === 'education' ? "School" : "Company"}
+                fieldName={experience.type.toLowerCase() === 'education' ? "School" : "Company"}
                 currentValue={experience.location}
                 inputType='text'
                 setter={setInstitution}>
