@@ -10,7 +10,15 @@ function App() {
     'phone': ''
   })
 
-  const [educationDetails, setEducationDetails] = useState([])
+  const [educationDetails, setEducationDetails] = useState([
+    {
+      name: 'Masters Degree in Code',
+      location: 'University of Bla',
+      startDate: 'Nov 2023',
+      endDate: 'Dec 2025',
+      bullets: [["Graduated with 95% GPA", "President of the Student Union"]]
+    }
+  ]) //mock for now, set to Empty when completed
 
   const [workDetails, setWorkDetails] = useState([])
 
