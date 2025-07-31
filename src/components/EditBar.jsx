@@ -1,4 +1,4 @@
-import EducationDetailsEditor from "./EducationDetailsEditor"
+import ExperienceDetailsEditor from "./ExperienceDetailsEditor"
 import PersonalDetailsEditor from "./PersonalDetailsEditor"
 
 export default function EditBar({ stateManager }) {
@@ -6,7 +6,9 @@ export default function EditBar({ stateManager }) {
     return (
         <div className='flex flex-col'>
             <PersonalDetailsEditor personalDetails={stateManager.personalDetails} setPersonalDetails={stateManager.setPersonalDetails}></PersonalDetailsEditor>
-            <EducationDetailsEditor educationDetails={stateManager.educationDetails} setEducationDetails={stateManager.setEducationDetails}></EducationDetailsEditor>
+            <ExperienceDetailsEditor experienceTypeName='Education' experienceDetails={stateManager.educationDetails} setExperienceDetails={stateManager.setEducationDetails}></ExperienceDetailsEditor>
+            <ExperienceDetailsEditor experienceTypeName='Work' experienceDetails={stateManager.workDetails} setExperienceDetails={stateManager.setWorkDetails}></ExperienceDetailsEditor>
+
         </div>
     )
 
