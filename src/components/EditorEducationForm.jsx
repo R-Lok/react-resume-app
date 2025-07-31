@@ -1,14 +1,14 @@
 import NamedInput from './NamedInput'
 
-export default function EditorEducationForm({ experience, index, editElement }) {
+export default function EditorExperienceForm({ experience, index, editElement }) {
 
 
     //Can refactor these all into one function later, just specify what field being changed
-    function setProgramName(name) {
+    function setTitle(name) {
         editElement(index, { ...experience, name })
     }
 
-    function setSchool(location) {
+    function setInstitution(location) {
         editElement(index, {...experience, location})
     }
 
@@ -27,35 +27,35 @@ export default function EditorEducationForm({ experience, index, editElement }) 
     return (
         <div>
             <NamedInput
-                id={'programName-' + { index }}
-                fieldName='Program'
+                id={experience.id}
+                fieldName={experience.type === 'education' ? "Program" : "Job Title"}
                 currentValue={experience.name}
                 inputType='text'
-                setter={setProgramName}>
+                setter={setTitle}>
             </NamedInput>
             <NamedInput
-                id={'schoolName-' + { index }}
-                fieldName='School'
+                id={experience.id}
+                fieldName={experience.type === 'education' ? "School" : "Company"}
                 currentValue={experience.location}
                 inputType='text'
-                setter={setSchool}>
+                setter={setInstitution}>
             </NamedInput>
             <NamedInput
-                id={'schoolStart-' + { index }}
+                id={experience.id}
                 fieldName='Start Date'
                 currentValue={experience.startDate}
                 inputType='date'
                 setter={setStartDate}>
             </NamedInput>
             <NamedInput
-                id={'schoolEnd-' + { index }}
+                id={experience.id}
                 fieldName='End Date'
                 currentValue={experience.endDate}
                 inputType='date'
                 setter={setEndDate}>
             </NamedInput>
             <NamedInput
-                id={'schoolDescription-' + { index }}
+                id={experience.id}
                 fieldName='Description'
                 currentValue={experience.description}
                 inputType='textarea'

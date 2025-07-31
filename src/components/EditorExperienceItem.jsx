@@ -1,5 +1,5 @@
 import {useState} from 'react'
-import EditorEducationForm from './EditorEducationForm'
+import EditorExperienceForm from './EditorExperienceForm'
 
 export default function EditorExperienceItem({ experience, index, removeElement, editElement, isShown }) {
 
@@ -10,7 +10,7 @@ export default function EditorExperienceItem({ experience, index, removeElement,
             <button onClick={() => {setShowDetails(!isShowDetails)}}>{experience.name}</button>
             <button onClick={() => { removeElement(index) }}> ❌ </button>
 
-            {isShowDetails ? <EditorEducationForm experience={experience} index={index} editElement={editElement}></EditorEducationForm>: null}
+            {isShowDetails ? <EditorExperienceForm experience={experience} index={index} editElement={editElement}></EditorExperienceForm>: null}
         </div>
     )
 }

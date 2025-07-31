@@ -17,7 +17,8 @@ function App() {
       'University of Bla',
       '2018-01-01',
       '2023-12-01',
-      '- Led the student union\n - Completed with 99% GPA'
+      '- Led the student union\n - Completed with 99% GPA',
+      'education'
     )
   ]) //mock for now, set to Empty when completed
 
@@ -27,7 +28,8 @@ function App() {
       'Brainwaves Ltd.',
       '2023-03-20',
       '2025-05-20',
-      '- Scanned brain images of patients \n - Responsible for operating MRI machinery'
+      '- Scanned brain images of patients \n - Responsible for operating MRI machinery',
+      'work'
     )
   ]) //mock for now, set to Empty when completed
 
