@@ -1,12 +1,13 @@
 import { useState } from 'react'
 import './App.css'
 import EditBar from './components/EditBar'
+import { ResumeDisplay } from './components/ResumeDisplay'
 
 function App() {
   const [personalDetails, setPersonalDetails] = useState({
     'name': '',
     'email': '',
-    'phoneNum': ''
+    'phone': ''
   })
 
   const [educationDetails, setEducationDetails] = useState([])
@@ -18,8 +19,9 @@ function App() {
   }
 
   return (
-    <div className='container'>
+    <div className='container flex gap-24 w-screen h-screen'>
       <EditBar stateManager={stateManager}></EditBar>
+      <ResumeDisplay personalDetails={personalDetails} educationDetails={educationDetails} workDetails={workDetails}></ResumeDisplay>
     </div>
   )
 }

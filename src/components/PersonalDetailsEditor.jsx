@@ -17,11 +17,11 @@ export default function PersonalDetailsEditor({ personalDetails, setPersonalDeta
     }
 
     return (
-        <>
+        <div>
         <h1>{title}</h1>
-        <NamedInput id='name-input' type='text' fieldName='Full Name' currentValue={personalDetails.name} setter={setName}></NamedInput>
-        <NamedInput id='email-input' type='email' fieldName='Email Address' currentValue={personalDetails.email} setter={setEmail}></NamedInput>
-        <NamedInput id='phone-input' type='tel' fieldName='Phone Number' currentValue={personalDetails.phone} setter={setPhoneNum}></NamedInput>
-        </>
+        <NamedInput id='name-input' inputType='text' fieldName='Full Name' currentValue={personalDetails.name} setter={setName}></NamedInput>
+        <NamedInput id='email-input' inputType='email' fieldName='Email Address' currentValue={personalDetails.email} setter={setEmail}></NamedInput>
+        <NamedInput id='phone-input' inputType='tel' fieldName='Phone Number' currentValue={personalDetails.phone} setter={setPhoneNum}></NamedInput>
+        </div>
     )
 }
