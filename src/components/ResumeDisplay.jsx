@@ -1,4 +1,4 @@
-import BasicInfoDisplay from "./BasicInfoDIsplay";
+import BasicInfoDisplay from "./BasicInfoDisplay";
 import ExperienceDetailsDisplay from "./ExperienceDetailsDisplay"
 
 export function ResumeDisplay({ personalDetails, workDetails, educationDetails }) {
